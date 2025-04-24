@@ -1,0 +1,8 @@
+ros2 launch velodyne velodyne-all-nodes-VLP16-launch.py
+open node
+
+ros2 run rviz2 rviz2 -f velodyne
+open rviz2
+
+设立静态frame：
+ros2 run tf2_ros static_transform_publisher 0 0 0 0 0 0 velodyne base_link
